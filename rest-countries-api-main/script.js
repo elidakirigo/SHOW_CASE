@@ -41,7 +41,7 @@ let myFunction = async(input) => {
 let getRegion = async(select) => {
     try {
         if (select) {
-            // document.querySelector(".spinner").style.display = "flex"
+            document.querySelector(".spinner").style.display = "flex"
             let data = await axios.get(`https://restcountries.com/v3.1/region/${select}`)
             console.log(data.data)
             document.querySelector("#flag-container").innerHTML = ""
