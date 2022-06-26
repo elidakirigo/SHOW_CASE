@@ -1,6 +1,5 @@
 /* you can import CSS from other pens - we'll import color and typography styles from this pen */
 @import url(//codepen.io/team/codepen/pen/NxwJpr.css);
-
 .links {
   width: 90%;
   margin: 0 auto;
@@ -31,15 +30,14 @@
   text-align: center;
 }
 
-.wipe,
-.slide,
-.opacity {
+.wipe, .slide, .opacity {
   border: 2px solid #fff;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .opacity {
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
   transition: background-color 0.3s linear, color 0.3s linear;
   background: rgba(255, 255, 255, 0);
 }
@@ -50,6 +48,7 @@
 }
 
 .wipe {
+  -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
 }
 
@@ -61,8 +60,12 @@
   content: " ";
   position: absolute;
   top: 0;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transform: translateY(34px);
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transform: translateY(34px);
+          transform: translateY(34px);
   z-index: -1;
 }
 
@@ -71,7 +74,8 @@
 }
 
 .wipe:hover::after {
-  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .underline {
@@ -87,6 +91,7 @@
   position: absolute;
   top: 34px;
   left: 50%;
+  -webkit-transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -100,3 +105,4 @@
   top: 34px;
   left: 0;
 }
+/*# sourceMappingURL=style.css.map */

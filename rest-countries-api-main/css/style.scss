@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --common_color:rgb(255, 98, 0);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color:
+    background: url("../images/world-map.gif"),  #194141b3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Nunito Sans';
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // align-items: center;
+    background-color: rgba(255, 255, 255, 0.64);
+    backdrop-filter: blur(4);
+    max-width: 640px;
+    width: 100%;
+    padding: 8rem;
+    border-radius: 5px;
+
+    input[type="text"] {
+        padding: 10px;
+        margin-bottom: 30px;
+        // height: 25px;
+        font-size: 20px;
+        border: 2px solid var(--common_color);
+        border-radius: 5px;
+        outline: none;
+        outline-offset: none;
+        &::placeholder{
+            color: var(--common_color);
+        }
+    }
+
+    button {
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        background-color: var(--common_color);
+        color: white;
+        font-size: 20px;
+        border-radius: 5px;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+}
