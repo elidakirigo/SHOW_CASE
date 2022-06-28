@@ -123,7 +123,6 @@ let getAll = async() => {
 
 getAll()
 
-
 const openModal = (item) => {
     showFiles(item)
     const singleDiv = document.getElementById("single-flag")
