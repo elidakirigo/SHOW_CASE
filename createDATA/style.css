@@ -1,0 +1,70 @@
+:root {
+  --text_default_color: white;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #393146;
+}
+
+main {
+  max-width: 18.75rem;
+  width: 100%;
+}
+
+.magenta {
+  background-color: magenta;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -50px;
+}
+
+.rectangle {
+  background-color: #eeee76;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 5px;
+  top: 10%;
+  width: 60vw;
+  max-width: 300px;
+  position: absolute;
+}
+
+.black-rectangle {
+  max-width: 30vw;
+  width: 20vw;
+  max-height: 20vh;
+  height: 10vh;
+  background-color: black;
+  position: absolute;
+}
+
+.black-rectangle .line {
+  width: 17vw;
+  border: 1px solid;
+  height: 2vh;
+  overflow: auto;
+  background-color: #ff3c00;
+}
+/*# sourceMappingURL=style.css.map */
