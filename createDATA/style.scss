@@ -23,50 +23,66 @@ body {
 }
 
 main {
-    max-width: rem(300px);
+    max-width: rem(400px);
     width: 100%;
-}
-
-.magenta {
-    background-color: magenta;
-    width: rem(60px);
-    height: rem(60px);
-    border-radius: 50%;
     position: absolute;
-    top: -10px;
-    left: -50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    // justify-content: flex-end;
+    flex-direction: column;
 }
 
 .rectangle {
     background-color: rgb(238, 238, 118);
-    font-size: 15px;
-    padding: 20px;
-    border-radius: 5px;
-    // margin: 20px 0;
-    top: 10%;
-    width: 60vw;
-    max-width: 300px;
-    position: absolute;
+    font-size: rem(18px);
+    padding: rem(25px);
+    border-radius: rem(5px);
+    box-shadow: rem(9px) rem(8px) rem(9px) #0000003d;
+    font-family: cursive;
+    position: relative;
+    width: 80%;
+
+    .magenta {
+        box-shadow: rem(1px) rem(5px) rem(9px) rem(3px) #0000003d;
+        background-color: #ff00ff;
+        position: absolute;
+        width: rem(70px);
+        height: rem(70px);
+        border-radius: 50%;
+        left: rem(-40px);
+        top: rem(-30px);
+    }
 }
 
 .black-rectangle {
-    max-width: 30vw;
-    width: 20vw;
-    max-height: 20vh;
-    height: 10vh;
-    background-color: black;
-    // border: 1px solid wheat;
+    width: rem(150px);
+    height: rem(70px);
+    background: radial-gradient(rgb(28, 28, 28), #000000);
     position: absolute;
+    cursor: move;
+    box-shadow: rem(6px) rem(5px) rem(7px) #0000006d;
+    border-radius: rem(5px);
+    overflow: hidden;
+    align-self: flex-end;
+    bottom: rem(-100px);
 
-    .line {
-        // position: absolute;
-        // top: 10px;
-        // left: -5px;
-        width: 17vw;
-        border: 1px solid;
-        height: 2vh;
-        overflow: auto;
-        // transform: rotate(25deg);
-        background-color: rgb(255, 60, 0);
+    &:hover {
+        &::before {
+            transform: rotate(-24deg);
+        }
+    }
+
+    &::before {
+        content: ' ';
+        position: absolute;
+        width: 120%;
+        height: rem(15px);
+        transform: rotate(23.6deg);
+        top: rem(27px);
+        left: rem(-20px);
+        background-color: rgb(255, 102, 0);
+
     }
 }
