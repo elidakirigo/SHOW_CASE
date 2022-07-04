@@ -46,13 +46,13 @@ main {
 
     .magenta {
         box-shadow: rem(1px) rem(5px) rem(9px) rem(3px) #0000003d;
-        background-color: #ff00ff;
+        background-color: #ae00ff;
         position: absolute;
-        width: rem(70px);
-        height: rem(70px);
+        width: rem(90px);
+        height: rem(90px);
         border-radius: 50%;
-        left: rem(-40px);
-        top: rem(-30px);
+        left: rem(-70px);
+        top: rem(-10px);
     }
 }
 
@@ -66,7 +66,7 @@ main {
     border-radius: rem(5px);
     overflow: hidden;
     align-self: flex-end;
-    bottom: rem(-100px);
+    bottom: rem(-70px);
 
     &:hover {
         &::before {
